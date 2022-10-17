@@ -3,7 +3,10 @@
 int main(void)
 {
     int num = 0;
-
+    int i = 0;
+        do
+        {
+            int num = 0;
 
             printf("Please enter an interger: ");
             scanf("%d", &num);
@@ -31,6 +34,8 @@ int main(void)
             {
                 printf("The number is odd and not divisible by 3.\n");
             }
-
+            i++;
+        }
+        while(i < 5);
     return 0;
 }
