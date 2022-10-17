@@ -5,6 +5,7 @@ int main(void)
 {
     double num[4]= {0,0,0,0};
     int i = 0;
+
     printf("Enter the first number: ");
         scanf("%lf", &num[0]);
     printf("Enter the second number: ");
@@ -21,7 +22,7 @@ int main(void)
     printf("2: Print a number \n");
     printf("3: Swap array positions \n");
     printf("\nEnter your choice: ");
-    scanf("%d", &i);
+        scanf("%d", &i);
 
     if(i == 1)
     {
@@ -32,23 +33,23 @@ int main(void)
         switch(pos)
         {
         case 0:
-            
-            printf("To what number do you want to change position 0? ");
+
+            printf("What number do you want to change to? ");
                 scanf("%lf", &topos);
             num[0] = topos;
             break;
         case 1:
-            printf("To what number do you want to change position 0? ");
+            printf("What number do you want to change to? ");
                 scanf("%lf", &topos);
             num[1] = topos;
             break;
         case 2:
-            printf("To what number do you want to change position 0? ");
+            printf("What number do you want to change to? ");
                 scanf("%lf", &topos);
             num[2] = topos;
             break;
         case 3:
-            printf("To what number do you want to change position 0? ");
+            printf("What number do you want to change to? ");
                 scanf("%lf", &topos);
             num[3] = topos;
             break;
@@ -57,6 +58,7 @@ int main(void)
         }
         printf("\nArray: [%lf, %lf, %lf, %lf]", num[0],num[1],num[2],num[3]);
     }
+
     else if(i == 2)
     {
         int pos = 0;
@@ -82,51 +84,55 @@ int main(void)
         }
         printf("\nArray: [%lf, %lf, %lf, %lf]", num[0],num[1],num[2],num[3]);
     }
+
     else if(i == 3)
     {
-        char input[3] = {0,0,0};
-        
+        int input1 = 0;
+        int input2 = 0;
+        double swap = 0;
+        printf("Enter the position you want to get swapped (0,1,2,3): ");
+            scanf("%d", &input1);
+        printf("Enter the position you want with (0,1,2,3): ");
+            scanf("%d", &input2);
 
-
-        printf("List the positions you want to swap separated by a space (e.g. 0 3): ");
-            scanf("%c", input);
-        int pos1 = input[0];
-        int pos2 = input[2];
-        
-        switch(pos1)
+        switch(input1)
         {
         case 0:
-            if(pos)
-            num[0] = num[pos2];
-            printf("%lf to %lf", num[0], num[pos2]);
+            swap = num[0];
+            num[0] = num[input2];
+            num[input2] = swap;
+            printf("Swap %lf with %lf", num[0], num[input2]);
 
             break;
         case 1:
-            num[0] = num[pos2];
+            swap = num[1];
+            num[1] = num[input2];
+            num[input2] = swap;
+            printf("Swap %lf with %lf", num[1], num[input2]);
 
             break;
         case 2:
-            num[0] = num[pos2];
+            swap = num[2];
+            num[2] = num[input2];
+            num[input2] = swap;
+            printf("Swap %lf with %lf", num[2], num[input2]);
             break;
         case 3:
-            num[0] = num[pos2];
+            swap = num[3];
+            num[3] = num[input2];
+            num[input2] = swap;
+            printf("Swap %lf with %lf", num[3], num[input2]);
             break;
         default:
             printf("\nInvalid input.");
         }
         printf("\nArray: [%lf, %lf, %lf, %lf]", num[0],num[1],num[2],num[3]);
     }
+
     else
     {
         printf("\nInvalid menu choice.");
     }
-
-
-
-
-
-
-
 
     return 0;
 }
