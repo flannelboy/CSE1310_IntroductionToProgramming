@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<string.h>
+#include <string.h>
 
 int main(void)
 {
@@ -23,11 +23,14 @@ int main(void)
     printf("3: Swap array positions \n");
     printf("\nEnter your choice: ");
         scanf("%d", &i);
-
-    if(i == 1)
+    int pos = 0;
+    double topos = 0;
+    int input1 = 0;
+    int input2 = 0;
+    double swap = 0;
+    switch(i)
     {
-        int pos = 0;
-        double topos = 0;
+    case 1:
         printf("Which position do you want to change (0, 1, 2, 3)? ");
             scanf("%d", &pos);
         switch(pos)
@@ -55,14 +58,11 @@ int main(void)
             break;
         default:
             printf("\nInvalid position.");
+            break;
         }
         printf("\nArray: [%lf, %lf, %lf, %lf]", num[0],num[1],num[2],num[3]);
-    }
-
-    else if(i == 2)
-    {
-        int pos = 0;
-
+        break;
+    case 2:
         printf("Which position would you like to print (0, 1, 2, 3)? ");
             scanf("%d", &pos);
         switch(pos)
@@ -81,19 +81,16 @@ int main(void)
             break;
         default:
             printf("\nInvalid position.");
+            break;
         }
         printf("\nArray: [%lf, %lf, %lf, %lf]", num[0],num[1],num[2],num[3]);
-    }
+        break;
 
-    else if(i == 3)
-    {
-        int input1 = 0;
-        int input2 = 0;
-        double swap = 0;
-        printf("Enter the position you want to get swapped (0,1,2,3): ");
-            scanf("%d", &input1);
-        printf("Enter the position you want with (0,1,2,3): ");
-            scanf("%d", &input2);
+
+    case 3:
+
+        printf("List the positions you want to swap separated by a space (e.g. 0 3): ");
+            scanf("%d %d", &input1,&input2);
 
         switch(input1)
         {
@@ -125,14 +122,18 @@ int main(void)
             break;
         default:
             printf("\nInvalid input.");
+            break;
         }
         printf("\nArray: [%lf, %lf, %lf, %lf]", num[0],num[1],num[2],num[3]);
+        break;
+
+
+    default:
+        printf("\nInvalid menu choice.");
+        break;
     }
 
-    else
-    {
-        printf("\nInvalid menu choice.");
-    }
+
 
     return 0;
 }
