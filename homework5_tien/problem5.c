@@ -23,7 +23,7 @@ int main(void)
         {
             printf("%d is not a holy number in Numerion" ,N);
         }
-    }while(N > 0);
+    }while(N != -1);
     printf("\nEXITING... HAVE A GOOD DAY!");
     return 0;
 }
