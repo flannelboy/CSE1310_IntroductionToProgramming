@@ -2,10 +2,8 @@
 
 int main(void)
 {
-        int N;
-
+    int N;
     printf("Welcome to planet Numerion!");
-
     do
     {
         int i=0;
@@ -18,20 +16,14 @@ int main(void)
             {
                 printf("%d is a holy number in Numerion, because %d = %d * %d + %d ", N, N, i,i,i);
                 x=1;
-
             }
             i=i+1;
         }
         if(x==0)
         {
             printf("%d is not a holy number in Numerion" ,N);
-
         }
-
-
     }while(N > 0);
-
     printf("\nEXITING... HAVE A GOOD DAY!");
-
     return 0;
 }
