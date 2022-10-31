@@ -2,16 +2,16 @@
 
 int main(void)
 {
-    int N;
-    int i=0;
-    int x=0;
+        int N;
 
     printf("Welcome to planet Numerion!");
-printf("\nEnter an integer N or -1 to quit: ");
-        scanf("%d", &N);
+
     do
     {
-
+        int i=0;
+        int x=0;
+        printf("\nEnter an integer N or -1 to quit: ");
+        scanf("%d", &N);
         while(i<N)
         {
             if(N == i*i + i)
@@ -28,9 +28,9 @@ printf("\nEnter an integer N or -1 to quit: ");
 
         }
 
-    printf("\nEnter an integer N or -1 to quit: ");
-        scanf("%d", &N);
+
     }while(N > 0);
+
     printf("\nEXITING... HAVE A GOOD DAY!");
 
     return 0;
