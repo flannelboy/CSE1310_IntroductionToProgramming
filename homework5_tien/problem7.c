@@ -18,7 +18,7 @@ int main(void)
             }
     }
 
-        printf("%d numbers between %d and %d are multiples of 11.", c,m,n);
+    printf("%d numbers between %d and %d are multiples of 11.", c,m,n);
 
 
     return 0;
