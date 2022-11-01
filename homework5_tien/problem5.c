@@ -19,11 +19,11 @@ int main(void)
             }
             i=i+1;
         }
-        if(x==0)
+        if(x==0 && N != -1)
         {
             printf("%d is not a holy number in Numerion" ,N);
         }
     }while(N != -1);
-    printf("\nEXITING... HAVE A GOOD DAY!");
+    printf("EXITING... HAVE A GOOD DAY!");
     return 0;
 }
