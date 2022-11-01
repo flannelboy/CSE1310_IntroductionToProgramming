@@ -2,18 +2,24 @@
 
 int main(void)
 {
-    int m,n,c;
+    int m,n;
+    int c=0;
 
     printf("Enter an integer M: ");
     scanf("%d", &m);
 
     printf("Enter an integer N: ");
     scanf("%d", &n);
-//use c and increment c by 1 everytime there is a number that is a multiple by 11
-            if(n % 11 == 0)
+    for(int i = m; i<= n;i++)
+    {
+        if(i % 11 == 0)
             {
-                printf("numbers between %d and %d are multiples of 11.",m,n );
+                c++;
             }
+    }
+
+        printf("%d numbers between %d and %d are multiples of 11.", c,m,n);
+
 
     return 0;
 
