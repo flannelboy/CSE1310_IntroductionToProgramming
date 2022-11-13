@@ -6,25 +6,23 @@ int getTimes(void)
     int times = 0;
     printf("Enter number of times (must be > 0): ");
     scanf("%d", &times);
-    while(times <= 0)
+    while(times <=0)
     {
-        printf("%d is <= 0, try again.\n", times);
+        printf("0 is <= 0, try again.");
         printf("Enter number of times (must be > 0): ");
         scanf("%d", &times);
     }
     return times;
 }
-
-void repeatLetters(char text[], int times)
+void repeatLetters(char text, int times)
 {
-    for(int position = 0; position < strlen(text) ; position++)
+    for(int j = 0; j < strlen(text); j++)
     {
-        for(int j = 0; j < times; j++)
+        for(int i = 0; i < times;i++)
         {
-            printf("%c", text[position]);
+            printf("%s", *text);
         }
     }
-    printf("\n");
 }
 
 int main(void)
