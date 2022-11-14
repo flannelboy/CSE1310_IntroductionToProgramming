@@ -1,6 +1,35 @@
 #include <stdio.h>
 #define PI 3.14159
 
+float cubeFloat(float number)
+{
+    return number*number*number;
+}
+
+float getRadius()
+{
+
+    float number = 0;
+    do
+    {
+        number = 0;
+        printf("Enter a radius >= 0 or -1 to quit: ");
+        scanf("%f", &number);
+        if((number < -1))
+        {
+            printf ("The number should be >= -1.\n");
+        }
+    }
+    while(number < -1);
+    cubeFloat(number);
+    return number;
+}
+
+float sphereVolume(float radius)
+{
+    float volume = (4/3)* PI * radius;
+    return volume;
+}
 int main()
 {
     float radius = getRadius();
