@@ -21,13 +21,13 @@ float getRadius()
         }
     }
     while(number < -1);
-    cubeFloat(number);
+    number = cubeFloat(number);
     return number;
 }
 
 float sphereVolume(float radius)
 {
-    float volume = (4/3)* PI * radius;
+    float volume = (4.00/3.00)* PI * radius;
     return volume;
 }
 int main()
