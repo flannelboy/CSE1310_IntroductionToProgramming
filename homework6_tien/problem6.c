@@ -3,10 +3,12 @@
 
 int countOccurences(char s[], char c)
 {
+    int count = 0;
     for(int i = 0; i< 10; i++)
     {
 
     }
+    return count;
 }
 int mostFrequentCharacter(char s[])
 {
