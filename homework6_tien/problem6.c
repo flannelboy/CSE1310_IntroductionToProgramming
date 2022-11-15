@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
+int countOccurences(char s[], char c)
+{
+    for(int i = 0; i< 10; i++)
+    {
+
+    }
+}
+int mostFrequentCharacter(char s[])
+{
+
+}
 int main()
 {
     char word[51];
