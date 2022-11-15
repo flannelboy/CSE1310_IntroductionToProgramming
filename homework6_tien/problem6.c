@@ -1,18 +1,30 @@
 #include <stdio.h>
 #include <string.h>
 
-int countOccurences(char s[], char c)
+int countOccurrences(char word[], char c)
 {
-    int count = 0;
-    for(int i = 0; i< 10; i++)
+    int max_count = 0;
+    for(int i = 0; i < 10; i++)
     {
+        if(word[i]== c)
+        {
+            max_count++;
+        }
 
     }
-    return count;
+    return max_count;
 }
-int mostFrequentCharacter(char s[])
+char mostFrequentCharacter(char word[])
 {
-
+    char max_char;
+    for(int i = 0; i < strlen(word); i++)
+    {
+        if(word[i+1] == word[i])
+        {
+            max_char = word[i];
+        }
+    }
+    return max_char;
 }
 int main()
 {
