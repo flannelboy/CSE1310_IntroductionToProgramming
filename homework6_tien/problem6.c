@@ -4,7 +4,7 @@
 int countOccurrences(char word[], char c)
 {
     int max_count = 0;
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < strlen(word); i++)
     {
         if(word[i]== c)
         {
