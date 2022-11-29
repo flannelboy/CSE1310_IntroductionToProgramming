@@ -79,14 +79,6 @@ int main()
 {
     int mtx[ROWS][COLS];
     generateMtx(mtx);
-    for (int r = 0; r < 4; r++)
-    {
-        for (int c = 0; c < 3; c++)
-        {
-            printf("%3d", mtx[r][c]);
-        }
-        printf("\n");
-    }
 
     int smallest = matrixSmallest(mtx);
     int smallPosition[2] = {-1, -1};
