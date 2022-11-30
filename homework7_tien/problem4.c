@@ -22,8 +22,6 @@ double regionAverages(double mtx[ROW][COL],int left, int right, int bot, int top
             time++;
         }
     }
-
-
     return regionSum / time;
 }
 void generateMtx(double mtx[ROW][COL])
@@ -44,14 +42,16 @@ void generateMtx(double mtx[ROW][COL])
 }
 void printMtx(double mtx[ROW][COL])
 {
-
+    printf("        Col 0   Col 1   Col 2");
     for(int r = 0; r < ROW; r++)
     {
+        printf("\nRow %d", r);
         for(int c = 0; c < COL; c++)
         {
-            printf("%4.1lf", mtx[r][c]);
+            printf("%8.1lf", mtx[r][c]);
         }
-        printf("\n");
+
+
     }
 }
 int main()
@@ -62,7 +62,7 @@ int main()
     printMtx(mtx);
 
     int left, right, bot, top;
-    printf("Enter top region boundary: ");
+    printf("\nEnter top region boundary: ");
         scanf("%d", &top);
     printf("Enter bottom region boundary: ");
         scanf("%d", &bot);
