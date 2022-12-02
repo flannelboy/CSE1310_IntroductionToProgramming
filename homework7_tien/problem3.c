@@ -2,7 +2,7 @@
 #define ROWS 4
 #define COLS 3
 
-int generateMtx(int mtx[ROWS][COLS])
+void generateMtx(int mtx[ROWS][COLS])
 {
     int value = 0;
 
@@ -16,7 +16,6 @@ int generateMtx(int mtx[ROWS][COLS])
         }
     }
 
-    return mtx;
 }
 int matrixSmallest(int mtx[ROWS][COLS])
 {
@@ -59,7 +58,7 @@ int matrixLargest(int mtx[ROWS][COLS])
     }
     return largest;
 }
-int elementPosition(int mtx[ROWS][COLS],  int num, int position[2])
+void elementPosition(int mtx[ROWS][COLS],  int num, int position[2])
 {
     for (int r = 0; r < 4; r++)
     {
@@ -72,7 +71,6 @@ int elementPosition(int mtx[ROWS][COLS],  int num, int position[2])
             }
         }
     }
-    return position;
 }
 
 int main()
