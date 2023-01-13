@@ -1,0 +1,5 @@
+3
+3
+Hello Dog
+Hello Cat
+Hello World!
